@@ -6,19 +6,22 @@
 /*   By: sfernand <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 14:33:50 by sfernand          #+#    #+#             */
-/*   Updated: 2022/11/07 15:25:13 by sfernand         ###   ########.fr       */
+/*   Updated: 2022/11/07 17:32:05 by sfernand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memset(void *p, int v, size_t len)
+void	*ft_memset(void *p, int v, int len)
 {
-	int	i;
+	int		i;
+	char	*a;
 
 	i = 0;
-	while (p[i] != len)
+	a = p;
+	while (a[i] != len)
 	{
-		p[i] = v;
+		a[i] = v;
 		i++;
 	}
+	p = a;
 	return (p);
 }
