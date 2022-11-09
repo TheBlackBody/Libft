@@ -6,22 +6,22 @@
 /*   By: sfernand <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 14:33:50 by sfernand          #+#    #+#             */
-/*   Updated: 2022/11/07 17:32:05 by sfernand         ###   ########.fr       */
+/*   Updated: 2022/11/08 15:27:27 by sfernand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include <string.h>
 
-void	*ft_memset(void *p, int v, int len)
+void	*ft_memset(void *p, int v, size_t len)
 {
-	int		i;
+	size_t	i;
 	char	*a;
 
 	i = 0;
-	a = p;
-	while (a[i] != len)
+	a = (char *)p;
+	while (i < len)
 	{
 		a[i] = v;
 		i++;
 	}
-	p = a;
 	return (p);
 }

@@ -1,26 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sfernand <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/07 15:38:03 by sfernand          #+#    #+#             */
-/*   Updated: 2022/11/08 15:26:54 by sfernand         ###   ########.fr       */
+/*   Created: 2022/11/08 08:13:17 by sfernand          #+#    #+#             */
+/*   Updated: 2022/11/08 15:27:59 by sfernand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <string.h>
 
-void	ft_bzero(void *p, size_t n)
+char	ft_strlcat(char *r_dest, char *r_src, int len)
 {
-	size_t	i;
-	char	*a;
+	int	i;
+	int	a;
 
 	i = 0;
-	a = (char *)p;
-	while (i < n)
+	a = 0;
+	while (r_dest[a] != 0)
+		a++;
+	while (i != len && r_src[i] != 0)
 	{
-		a[i] = '0';
+		r_dest[a] = r_dest[i];
 		i++;
+		a++;
 	}
+	while (i != len)
+	{
+		r_dest[a] = '\0';
+		i++;
+		a++;
+	}
+	return (0);
 }

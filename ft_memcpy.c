@@ -6,24 +6,24 @@
 /*   By: sfernand <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 17:39:18 by sfernand          #+#    #+#             */
-/*   Updated: 2022/11/07 17:54:52 by sfernand         ###   ########.fr       */
+/*   Updated: 2022/11/08 15:26:38 by sfernand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include <string.h>
 
-void	*ft_memcpy(void *r_dest, const void *r_src, int n)
+void	*ft_memcpy(void *r_dest, const void *r_src, size_t n)
 {
-	int			i;
+	size_t		i;
 	char		*a;
 	const char	*b;
 
 	i = 0;
-	a = r_dest;
-	b = r_src;
-	while (b[i] != n)
+	a = (char *)r_dest;
+	b = (char *)r_src;
+	while (i < n)
 	{
 		a[i] = b[i];
 		i++;
 	}
-	r_dest = a;
 	return (r_dest);
 }

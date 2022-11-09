@@ -1,26 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sfernand <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/07 15:38:03 by sfernand          #+#    #+#             */
-/*   Updated: 2022/11/08 15:26:54 by sfernand         ###   ########.fr       */
+/*   Created: 2022/11/08 07:59:32 by sfernand          #+#    #+#             */
+/*   Updated: 2022/11/08 10:07:50 by sfernand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <string.h>
 
-void	ft_bzero(void *p, size_t n)
+char	ft_strlcpy(char *r_dest, char *r_src, int len)
 {
-	size_t	i;
-	char	*a;
+	int	i;
 
 	i = 0;
-	a = (char *)p;
-	while (i < n)
+	while (i != len && r_src[i] != 0)
 	{
-		a[i] = '0';
+		r_dest[i] = r_src[i];
 		i++;
 	}
+	while (len != i)
+	{
+		r_dest = "\0";
+		i++;
+	}
+	return (0);
 }
