@@ -1,31 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sfernand <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/09 11:48:22 by sfernand          #+#    #+#             */
-/*   Updated: 2022/11/09 13:30:43 by sfernand         ###   ########.fr       */
+/*   Created: 2022/11/09 15:04:42 by sfernand          #+#    #+#             */
+/*   Updated: 2022/11/09 15:37:25 by sfernand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*strrchr(const char *s, int c)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	int	i;
-
-	i = 0;
-	while (s[i])
-	{
-		i++;
-	}
-	while (s[i] != c)
-	{
-		i--;
-	}
-	if (s[i] == c)
-	{
-		return ((char *)s);
-	}
-	return ("\0");
+	
 }

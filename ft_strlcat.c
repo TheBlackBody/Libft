@@ -6,30 +6,38 @@
 /*   By: sfernand <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 08:13:17 by sfernand          #+#    #+#             */
-/*   Updated: 2022/11/08 15:27:59 by sfernand         ###   ########.fr       */
+/*   Updated: 2022/11/09 14:55:35 by sfernand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include<string.h>
 
-char	ft_strlcat(char *r_dest, char *r_src, int len)
+char	ft_strlcat(char *r_dest, char *r_src, size_t len)
 {
-	int	i;
-	int	a;
+	size_t	i;
+	size_t	a;
+	size_t	e;
 
 	i = 0;
 	a = 0;
+	e = 0;
 	while (r_dest[a] != 0)
 		a++;
-	while (i != len && r_src[i] != 0)
+	while (i != len - 1 && r_src[i] != 0)
 	{
 		r_dest[a] = r_dest[i];
 		i++;
 		a++;
 	}
+	e = a;
 	while (i != len)
 	{
 		r_dest[a] = '\0';
 		i++;
 		a++;
 	}
-	return (0);
+	i = 0;
+	while (r_src[i])
+		i++;
+	e = e + i;
+	return (e);
 }

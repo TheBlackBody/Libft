@@ -6,11 +6,11 @@
 /*   By: sfernand <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 10:52:07 by sfernand          #+#    #+#             */
-/*   Updated: 2022/11/09 10:55:03 by sfernand         ###   ########.fr       */
+/*   Updated: 2022/11/09 14:57:02 by sfernand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	toupper(int c)
+int	ft_tolower(int c)
 {
 	int	a;
 
