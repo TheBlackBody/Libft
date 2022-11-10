@@ -6,12 +6,12 @@
 /*   By: sfernand <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 07:59:32 by sfernand          #+#    #+#             */
-/*   Updated: 2022/11/09 14:04:35 by sfernand         ###   ########.fr       */
+/*   Updated: 2022/11/10 21:42:26 by sfernand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include<string.h>
 
-size_t	ft_strlcpy(char *r_dest, char *r_src, size_t len)
+size_t	ft_strlcpy(char *r_dest, const char *r_src, size_t len)
 {
 	size_t	i;
 	size_t	b;

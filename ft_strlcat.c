@@ -6,7 +6,7 @@
 /*   By: sfernand <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 08:13:17 by sfernand          #+#    #+#             */
-/*   Updated: 2022/11/10 12:58:48 by sfernand         ###   ########.fr       */
+/*   Updated: 2022/11/10 21:42:05 by sfernand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include<string.h>
@@ -21,7 +21,7 @@ int	ft_lenght(char *src)
 	return (i);
 }
 
-char	ft_strlcat(char *r_dest, char *r_src, size_t len)
+char	ft_strlcat(char *r_dest, const char *r_src, size_t len)
 {
 	size_t	i;
 	size_t	a;

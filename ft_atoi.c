@@ -6,7 +6,7 @@
 /*   By: sfernand <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 15:27:26 by sfernand          #+#    #+#             */
-/*   Updated: 2022/11/10 17:03:57 by sfernand         ###   ########.fr       */
+/*   Updated: 2022/11/10 21:45:43 by sfernand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int	ft_atoi(const char *str)
 	}
 	while (str[i] >= 48 && str[i] <= 57)
 	{
-		num = num * 10 + (str[i] - 48);
+		num = str[i] - 48;
 		i++;
 	}
 	return (num * neg);
