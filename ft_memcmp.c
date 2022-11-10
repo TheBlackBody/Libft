@@ -1,43 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sfernand <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/09 15:04:42 by sfernand          #+#    #+#             */
-/*   Updated: 2022/11/10 11:55:34 by sfernand         ###   ########.fr       */
+/*   Created: 2022/11/10 13:05:50 by sfernand          #+#    #+#             */
+/*   Updated: 2022/11/10 13:19:31 by sfernand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <string.h>
 
-int	ft_lenght1(const char *src, size_t	n)
+int	memcmp(const void *s1, const void *s2, size_t n)
 {
 	size_t	i;
-	int		*a;
-	int		b;
+	char	*a;
+	char	*b;
 
 	i = 0;
-	a = (int *)src;
-	b = 0;
+	a = (char *)s1;
+	b = (char *)s2;
 	while (i < n)
 	{
-		b = b + a[i];
+		if (a[i] < b[i])
+			return (-1);
+		else if (a[i] > b[i])
+			return (1);
 		i++;
-	}	
-	return (b);
-}
-
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
-{
-	size_t	i;
-
-	i = 0;
-	if (ft_lenght1(s1, n) == ft_lenght1(s2, n))
-		return (0);
-	else if (ft_lenght1(s1, n) < ft_lenght1(s2, n))
-		return (-1);
-	else if (ft_lenght1(s1, n) < ft_lenght1(s2, n))
-		return (1);
+	}
 	return (0);
 }

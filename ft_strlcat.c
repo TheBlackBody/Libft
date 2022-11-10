@@ -6,10 +6,20 @@
 /*   By: sfernand <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 08:13:17 by sfernand          #+#    #+#             */
-/*   Updated: 2022/11/09 17:10:32 by sfernand         ###   ########.fr       */
+/*   Updated: 2022/11/10 12:58:48 by sfernand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include<string.h>
+
+int	ft_lenght(char *src)
+{
+	int	i;
+
+	i = 0;
+	while (src[i] != 0)
+		i++;
+	return (i);
+}
 
 char	ft_strlcat(char *r_dest, char *r_src, size_t len)
 {
@@ -36,8 +46,6 @@ char	ft_strlcat(char *r_dest, char *r_src, size_t len)
 		a++;
 	}
 	i = 0;
-	while (r_src[i])
-		i++;
-	e = e + i;
+	e = e + ft_lenght(r_src);
 	return (e);
 }

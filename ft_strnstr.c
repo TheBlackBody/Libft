@@ -1,43 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sfernand <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/09 15:04:42 by sfernand          #+#    #+#             */
-/*   Updated: 2022/11/10 11:55:34 by sfernand         ###   ########.fr       */
+/*   Created: 2022/11/10 13:20:12 by sfernand          #+#    #+#             */
+/*   Updated: 2022/11/10 15:27:02 by sfernand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <string.h>
 
-int	ft_lenght1(const char *src, size_t	n)
+int	ft_needle(const char *car)
 {
-	size_t	i;
-	int		*a;
-	int		b;
+	int	i;
 
 	i = 0;
-	a = (int *)src;
-	b = 0;
-	while (i < n)
+	while (car[i] != 0)
 	{
-		b = b + a[i];
 		i++;
-	}	
-	return (b);
+	}
+	return (i);
 }
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+char	*strnstr(const char *haystack, const char *needle, size_t len)
 {
 	size_t	i;
+	int		a;
 
 	i = 0;
-	if (ft_lenght1(s1, n) == ft_lenght1(s2, n))
-		return (0);
-	else if (ft_lenght1(s1, n) < ft_lenght1(s2, n))
-		return (-1);
-	else if (ft_lenght1(s1, n) < ft_lenght1(s2, n))
-		return (1);
+	a = 0;
+	if (needle[i] == 0)
+		return (NULL);
+	while (i < len)
+	{
+		if (haystack[i] == needle[i])
+			a++;
+		if (a == ft_needle(needle))
+			return ((char *)&needle[i - (a + 1)]);
+		i++;
+	}
 	return (0);
 }
