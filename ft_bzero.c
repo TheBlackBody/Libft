@@ -6,7 +6,7 @@
 /*   By: sfernand <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 15:38:03 by sfernand          #+#    #+#             */
-/*   Updated: 2022/11/10 21:37:24 by sfernand         ###   ########.fr       */
+/*   Updated: 2022/11/10 23:51:37 by sfernand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <string.h>
@@ -20,7 +20,7 @@ void	ft_bzero(void *p, size_t n)
 	a = (char *)p;
 	while (i < n)
 	{
-		a[i] = '0';
+		a[i] = 0;
 		i++;
 	}
 }

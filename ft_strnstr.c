@@ -6,7 +6,7 @@
 /*   By: sfernand <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 13:20:12 by sfernand          #+#    #+#             */
-/*   Updated: 2022/11/10 21:44:08 by sfernand         ###   ########.fr       */
+/*   Updated: 2022/11/11 01:02:18 by sfernand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <string.h>
@@ -23,7 +23,7 @@ int	ft_needle(const char *car)
 	return (i);
 }
 
-char	*strnstr(const char *haystack, const char *needle, size_t len)
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	size_t	i;
 	int		a;

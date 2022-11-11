@@ -6,19 +6,15 @@
 /*   By: sfernand <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 09:45:45 by sfernand          #+#    #+#             */
-/*   Updated: 2022/11/10 21:47:06 by sfernand         ###   ########.fr       */
+/*   Updated: 2022/11/11 00:55:55 by sfernand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_toupper(int c)
 {
-	int	a;
-
-	a = 0;
-	if (c >= 97 && c <= 122)
+	if (c >= 'a' && c <= 'z')
 	{
-		a = c - 32;
-		return (c);
+		return (c - 32);
 	}
-	return (0);
+	return (c);
 }

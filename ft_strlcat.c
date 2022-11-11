@@ -6,12 +6,12 @@
 /*   By: sfernand <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 08:13:17 by sfernand          #+#    #+#             */
-/*   Updated: 2022/11/10 21:42:05 by sfernand         ###   ########.fr       */
+/*   Updated: 2022/11/10 23:31:34 by sfernand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include<string.h>
 
-int	ft_lenght(char *src)
+int	ft_lenght(const char *src)
 {
 	int	i;
 

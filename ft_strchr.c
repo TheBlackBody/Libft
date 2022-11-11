@@ -6,22 +6,28 @@
 /*   By: sfernand <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 10:57:38 by sfernand          #+#    #+#             */
-/*   Updated: 2022/11/10 21:43:04 by sfernand         ###   ########.fr       */
+/*   Updated: 2022/11/11 04:38:58 by sfernand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*strchr(const char *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
-	int			i;
+	int	i;
 
 	i = 0;
-	while (s[i] != c && s[i] != 0)
+	while (s[i])
 	{
+		if (s[i] == (char)c)
+			return ((char *)&s[i]);
+		if ((c < 0 || c > 127) || (s[i] < 0 || s[i] > 127))
+			return (0);
 		i++;
 	}
+	if (s[i] == 0)
+		return ((char *)&s[i]);
 	if (s[i] == c)
 	{
-		return ((char *)s);
+		return ((char *)&s[i]);
 	}
 	return ("\0");
 }

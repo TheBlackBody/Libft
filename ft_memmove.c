@@ -6,7 +6,7 @@
 /*   By: sfernand <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 11:01:48 by sfernand          #+#    #+#             */
-/*   Updated: 2022/11/10 21:39:05 by sfernand         ###   ########.fr       */
+/*   Updated: 2022/11/11 01:53:48 by sfernand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <string.h>
@@ -15,25 +15,29 @@ void	*ft_memmove(void *dest, const void *src, size_t len)
 {
 	size_t	i;
 	char	*a;
-	char	*b;
 	char	*c;
 
 	i = 0;
 	a = (char *)dest;
 	c = (char *)src;
-	b = "\0";
-	if (dest == '\0' && src == '\0')
+	if (a == NULL && c == NULL && len > 0)
 		return (dest);
-	while (i != len)
+	if (a > c)
 	{
-		b[i] = c[i];
-		i++;
+		while (len > 0)
+		{
+			a[len - 1] = c[len - 1];
+			len--;	
+		}
 	}
-	i = 0;
-	while (i < len)
+	else 
 	{
-		a[i] = b[i];
-		i++;
+		i = 0;
+		while (i < len)
+		{
+			a[i] = c[i];
+			i++;
+		}
 	}
 	return (dest);
 }

@@ -6,19 +6,15 @@
 /*   By: sfernand <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 10:52:07 by sfernand          #+#    #+#             */
-/*   Updated: 2022/11/09 14:57:02 by sfernand         ###   ########.fr       */
+/*   Updated: 2022/11/11 00:59:20 by sfernand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_tolower(int c)
 {
-	int	a;
-
-	a = 0;
-	if (c >= 65 && c <= 90)
+	if (c >= 'A' && c <= 'Z')
 	{
-		a = c + 32;
-		return (a);
+		return (c + 'a' - 'A');
 	}
-	return (0);
+	return (c);
 }

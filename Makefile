@@ -6,7 +6,7 @@
 #    By: sfernand <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/10 22:14:33 by sfernand          #+#    #+#              #
-#    Updated: 2022/11/10 22:31:13 by sfernand         ###   ########.fr        #
+#    Updated: 2022/11/11 01:08:53 by sfernand         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,6 @@ RM = rm -f
 FILES = ft_memset \
 		ft_bzero \
 		ft_memcpy \
-		ft_memccpy \
 		ft_memmove \
 		ft_memchr \
 		ft_memcmp \
@@ -28,6 +27,7 @@ FILES = ft_memset \
 		ft_strlcpy \
 		ft_strlcat \
 		ft_strchr \
+		ft_strrchr \
 		ft_strnstr \
 		ft_strncmp \
 		ft_atoi \

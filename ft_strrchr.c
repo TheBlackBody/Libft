@@ -6,11 +6,11 @@
 /*   By: sfernand <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 11:48:22 by sfernand          #+#    #+#             */
-/*   Updated: 2022/11/10 21:43:21 by sfernand         ###   ########.fr       */
+/*   Updated: 2022/11/11 01:16:02 by sfernand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*strrchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
 	int	i;
 
