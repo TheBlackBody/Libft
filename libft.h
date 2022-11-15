@@ -6,7 +6,7 @@
 /*   By: sfernand <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 21:25:40 by sfernand          #+#    #+#             */
-/*   Updated: 2022/11/15 16:33:42 by sfernand         ###   ########.fr       */
+/*   Updated: 2022/11/15 17:26:32 by sfernand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,6 @@ int					ft_isascii(int n);
 int					ft_isprint(int n);
 int					ft_toupper(int c);
 int					ft_tolower(int c);
-void				ft_calloc(size_t count, size_t size);
+void				*ft_calloc(size_t count, size_t size);
 char				*ft_strdup(const char *s1);
 #endif
