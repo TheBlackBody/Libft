@@ -6,46 +6,35 @@
 /*   By: sfernand <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 08:13:17 by sfernand          #+#    #+#             */
-/*   Updated: 2022/11/10 23:31:34 by sfernand         ###   ########.fr       */
+/*   Updated: 2022/11/15 16:37:51 by sfernand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include<string.h>
+#include"libft.h"
 
-int	ft_lenght(const char *src)
-{
-	int	i;
-
-	i = 0;
-	while (src[i] != 0)
-		i++;
-	return (i);
-}
-
-char	ft_strlcat(char *r_dest, const char *r_src, size_t len)
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
 	size_t	i;
-	size_t	a;
-	size_t	e;
+	size_t	j;
+	size_t	s;
+	size_t	d;
 
-	i = 0;
-	a = 0;
-	e = 0;
-	while (r_dest[a] != 0)
-		a++;
-	while (i != len - 1 && r_src[i] != 0)
+	j = 0;
+	if (!dst && size == 0)
+		return (0);
+	d = ft_strlen(dst);
+	s = ft_strlen(src);
+	i = d;
+	if (size < d)
+		return (s + size);
+	else
 	{
-		r_dest[a] = r_dest[i];
-		i++;
-		a++;
+		while (src[j] && (d + j) < size)
+			dst[i++] = src[j++];
+		if ((d + j) == size && d < size)
+			dst[--i] = '\0';
+		else
+			dst[i] = '\0';
+		return (s + d);
 	}
-	e = a;
-	while (i != len)
-	{
-		r_dest[a] = '\0';
-		i++;
-		a++;
-	}
-	i = 0;
-	e = e + ft_lenght(r_src);
-	return (e);
 }

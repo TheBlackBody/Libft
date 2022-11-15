@@ -6,7 +6,7 @@
 /*   By: sfernand <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 11:01:48 by sfernand          #+#    #+#             */
-/*   Updated: 2022/11/11 01:53:48 by sfernand         ###   ########.fr       */
+/*   Updated: 2022/11/14 17:32:49 by sfernand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <string.h>
@@ -27,17 +27,14 @@ void	*ft_memmove(void *dest, const void *src, size_t len)
 		while (len > 0)
 		{
 			a[len - 1] = c[len - 1];
-			len--;	
+			len --;
 		}
 	}
-	else 
+	else
 	{
 		i = 0;
-		while (i < len)
-		{
-			a[i] = c[i];
-			i++;
-		}
+		while (i++ < len)
+			a[i - 1] = c[i - 1];
 	}
 	return (dest);
 }

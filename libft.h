@@ -6,7 +6,7 @@
 /*   By: sfernand <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 21:25:40 by sfernand          #+#    #+#             */
-/*   Updated: 2022/11/10 23:22:49 by sfernand         ###   ########.fr       */
+/*   Updated: 2022/11/15 16:33:42 by sfernand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,11 @@
 #  define OPEN_MAX 32
 # endif
 
-typedef struct		s_list
+typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
-}
+}									t_list;
 
 void				*ft_memset(void *p, int v, size_t len);
 void				ft_bzero(void *p, size_t n);
@@ -39,11 +39,11 @@ void				*ft_memchr(const void *s, int c, size_t n);
 int					ft_memcmp(const void *s1, const void *s2, size_t n);
 int					ft_strlen(const char *a);
 size_t				ft_strlcpy(char *r_dest, const char *r_src, size_t len);
-size_t				ft_strlcat(char *r_dest, const char *r_src, size_t len);
+size_t				ft_strlcat(char *dst, const char *src, size_t size);
 char				*ft_strchr(const char *s, int c);
 char				*ft_strrchr(const char *s, int c);
 char				*ft_strnstr(const char *haystack,
-	const char *needle, size_t len);
+						const char *needle, size_t len);
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
 int					ft_atoi(const char *str);
 int					ft_isalpha(int n);
@@ -53,4 +53,6 @@ int					ft_isascii(int n);
 int					ft_isprint(int n);
 int					ft_toupper(int c);
 int					ft_tolower(int c);
+void				ft_calloc(size_t count, size_t size);
+char				*ft_strdup(const char *s1);
 #endif

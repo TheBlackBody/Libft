@@ -6,7 +6,7 @@
 #    By: sfernand <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/10 22:14:33 by sfernand          #+#    #+#              #
-#    Updated: 2022/11/11 01:08:53 by sfernand         ###   ########.fr        #
+#    Updated: 2022/11/14 13:23:00 by sfernand         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,7 +37,9 @@ FILES = ft_memset \
 		ft_isascii \
 		ft_isprint \
 		ft_toupper \
-		ft_tolower 
+		ft_tolower \
+		ft_calloc \
+		ft_strdup
 
 SRCS_DIR = ./
 SRCS = $(addprefix $(SRCS_DIR), $(addsuffix .c, $(FILES)))

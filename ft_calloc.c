@@ -1,40 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sfernand <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/08 07:59:32 by sfernand          #+#    #+#             */
-/*   Updated: 2022/11/14 17:02:53 by sfernand         ###   ########.fr       */
+/*   Created: 2022/11/14 12:49:59 by sfernand          #+#    #+#             */
+/*   Updated: 2022/11/15 16:01:12 by sfernand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include<string.h>
+#include <stdlib.h>
 
-size_t	ft_lensrc(const char *r_src)
+void	*ft_calloc(size_t count, size_t size)
 {
-	int	i;
+	char	*dest;
+	int		i;
+	int		n;
 
+	dest = (void *)malloc(count * size);
+	n = (count * size);
 	i = 0;
-	while (r_src[i])
-		i++;
-	return (i);
-}
-
-size_t	ft_strlcpy(char *r_dest, const char *r_src, size_t len)
-{
-	size_t	i;
-	size_t	lensrc;
-
-	i = 0;
-	lensrc = ft_lensrc(r_src);
-	if (!len)
-		return (lensrc);
-	while (r_src[i] && i < len - 1)
+	if (!dest)
 	{
-		r_dest[i] = r_src[i];
+		return (NULL);
+	}
+	while (i < n)
+	{
+		dest[i] = 0;
 		i++;
 	}
-	r_dest[i] = '\0';
-	return (lensrc);
+	return ((void *)dest);
 }
