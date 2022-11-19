@@ -6,7 +6,7 @@
 #    By: sfernand <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/10 22:14:33 by sfernand          #+#    #+#              #
-#    Updated: 2022/11/16 13:22:31 by sfernand         ###   ########.fr        #
+#    Updated: 2022/11/19 15:02:08 by sfernand         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,7 +41,16 @@ FILES = ft_memset \
 		ft_calloc \
 		ft_strdup \
 		ft_substr \
-		ft_strjoin
+		ft_strjoin \
+		ft_strtrim \
+		ft_split \
+		ft_itoa \
+		ft_strmapi \
+		ft_striteri \
+		ft_putchar_fd \
+		ft_putstr_fd \
+		ft_putendl_fd \
+		ft_putnbr_fd
 
 SRCS_DIR = ./
 SRCS = $(addprefix $(SRCS_DIR), $(addsuffix .c, $(FILES)))

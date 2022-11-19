@@ -6,10 +6,9 @@
 /*   By: sfernand <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 08:13:17 by sfernand          #+#    #+#             */
-/*   Updated: 2022/11/15 17:17:55 by sfernand         ###   ########.fr       */
+/*   Updated: 2022/11/17 16:27:14 by sfernand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include<string.h>
 #include"libft.h"
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
